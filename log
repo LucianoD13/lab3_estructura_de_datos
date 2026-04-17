@@ -76,3 +76,17 @@ hashmap.c:63:12: error: comparison between pointer and integer [-Werror]
       |            ^~
 cc1: all warnings being treated as errors
 3a0d388
+Fri Apr 17 03:41:02 PM UTC 2026: 
+ hashmap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:63:12: error: comparison between pointer and integer [-Werror]
+   63 |     if(pos != NULL){
+      |            ^~
+hashmap.c:67:18: error: assignment to ‘long int’ from ‘Pair *’ makes integer from pointer without a cast [-Wint-conversion]
+   67 |     map->current = new;
+      |                  ^
+cc1: all warnings being treated as errors
+41fb991

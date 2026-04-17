@@ -63,7 +63,8 @@ void insertMap(HashMap * map, char * key, void * value) {
     if(pos != NULL){
         pos = (pos + 1) % map->capacity;
     }
-    createPair(key, value);
+    Pair* new = createPair(key, value);
+    map->current = new;
     map->size++;
 }
 
