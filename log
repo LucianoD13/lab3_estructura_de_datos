@@ -344,3 +344,23 @@ hashmap.c:128:10: error: unused variable ‘pos’ [-Werror=unused-variable]
       |          ^~~
 cc1: all warnings being treated as errors
 a14bb31
+Fri Apr 17 07:10:00 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:118:38: error: expected ‘;’ before ‘:’ token
+  118 |     for(long i = 0; i < map->capacity: i++){
+      |                                      ^
+      |                                      ;
+hashmap.c: In function ‘nextMap’:
+hashmap.c:129:11: error: ‘i’ undeclared (first use in this function)
+  129 |     while(i < map->current){
+      |           ^
+hashmap.c:129:11: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:128:10: error: unused variable ‘pos’ [-Werror=unused-variable]
+  128 |     long pos = map->current + 1;
+      |          ^~~
+cc1: all warnings being treated as errors
+d028b0d
