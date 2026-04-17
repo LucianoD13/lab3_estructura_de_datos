@@ -65,3 +65,14 @@ hashmap.c:128:59: error: request for member ‘value’ in something not a struc
       |                                                           ^~
 cc1: all warnings being treated as errors
 b100cb4
+Fri Apr 17 03:39:16 PM UTC 2026: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:63:12: error: comparison between pointer and integer [-Werror]
+   63 |     if(pos != NULL){
+      |            ^~
+cc1: all warnings being treated as errors
+3a0d388
