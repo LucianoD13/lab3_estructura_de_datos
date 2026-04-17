@@ -379,3 +379,14 @@ hashmap.c:128:10: error: unused variable ‘pos’ [-Werror=unused-variable]
       |          ^~~
 cc1: all warnings being treated as errors
 c20c737
+Fri Apr 17 07:10:56 PM UTC 2026: 
+ hashmap.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:130:25: error: ‘i’ undeclared (first use in this function)
+  130 |         if(map->buckets[i] != NULL){
+      |                         ^
+hashmap.c:130:25: note: each undeclared identifier is reported only once for each function it appears in
+aa5c10a

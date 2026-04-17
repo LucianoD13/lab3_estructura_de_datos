@@ -126,12 +126,12 @@ Pair * firstMap(HashMap * map) {
 
 Pair * nextMap(HashMap * map) {
     long pos = map->current + 1;
-    while(i < map->current){
+    while(pos < map->current){
         if(map->buckets[i] != NULL){
-            map->current = i;
-            return map->buckets[i];
+            map->current = pos;
+            return map->buckets[pos];
         }
-        i++;
+        pos++;
     }
     return NULL;
 }
