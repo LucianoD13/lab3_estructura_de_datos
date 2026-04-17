@@ -119,3 +119,17 @@ hashmap.c:67:18: error: assignment to ‘long int’ from ‘Pair *’ makes int
       |                  ^
 cc1: all warnings being treated as errors
 5d1b29b
+Fri Apr 17 03:44:17 PM UTC 2026: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:63:12: error: comparison between pointer and integer [-Werror]
+   63 |     if(pos != NULL){
+      |            ^~
+hashmap.c:68:18: error: assignment to ‘long int’ from ‘Pair *’ makes integer from pointer without a cast [-Wint-conversion]
+   68 |     map->current = new;
+      |                  ^
+cc1: all warnings being treated as errors
+5af5779
