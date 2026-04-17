@@ -181,3 +181,19 @@ Fri Apr 17 05:36:26 PM UTC 2026:
  tests:  3|4
 total_score: 20/60
 5fa9e8c
+Fri Apr 17 05:45:58 PM UTC 2026: 
+ hashmap.c | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:91:50: error: returning ‘long int’ from a function with return type ‘Pair *’ makes pointer from integer without a cast [-Wint-conversion]
+   91 |         if(map->buckets[pos]->key == key) return pos;
+      |                                                  ^~~
+hashmap.c:93:44: error: expected ‘;’ before ‘}’ token
+   93 |             pos = (pos + 1) % map->capacity
+      |                                            ^
+      |                                            ;
+   94 |         }
+      |         ~                                   
+20f8a0f
