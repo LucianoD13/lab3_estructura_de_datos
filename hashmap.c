@@ -91,6 +91,9 @@ void insertMap(HashMap * map, char * key, void * value) {
 Pair * searchMap(HashMap * map,  char * key) {
     long pos = hash(key, map->capacity);
     long inicio = pos;
+    if(map->buckets[pos] == NULL){
+        return NULL;
+    }
     while(map->buckets[pos] != NULL){
         if(map->buckets[pos]->key == key){
             map->current = pos;
@@ -109,8 +112,7 @@ Pair * searchMap(HashMap * map,  char * key) {
 // Recuerde actualizar la variable size.
 
 void eraseMap(HashMap * map,  char * key) {    
-
-
+    
 }
 
 // 5. Implemente las funciones para recorrer la estructura: Pair * firstMap(HashMap * map) retorna el primer Pair válido del arreglo buckets. 
