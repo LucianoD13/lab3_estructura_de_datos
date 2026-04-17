@@ -35,3 +35,33 @@ hashmap.c:128:59: error: request for member ‘value’ in something not a struc
       |                                                           ^~
 cc1: all warnings being treated as errors
 364e3f7
+Fri Apr 17 03:38:11 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:63:12: error: comparison between pointer and integer [-Werror]
+   63 |     if(pos != NULL){
+      |            ^~
+hashmap.c: In function ‘enlarge’:
+hashmap.c:122:5: error: unknown type name ‘pair’; did you mean ‘Pair’?
+  122 |     pair** old_buckets = map->buckets;
+      |     ^~~~
+      |     Pair
+hashmap.c:122:26: error: initialization of ‘int **’ from incompatible pointer type ‘Pair **’ [-Wincompatible-pointer-types]
+  122 |     pair** old_buckets = map->buckets;
+      |                          ^~~
+hashmap.c:125:49: error: ‘pair’ undeclared (first use in this function); did you mean ‘Pair’?
+  125 |     map->buckets = calloc(map->capacity, sizeof(pair));
+      |                                                 ^~~~
+      |                                                 Pair
+hashmap.c:125:49: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:128:38: error: request for member ‘key’ in something not a structure or union
+  128 |         insertMap(map, old_buckets[i]->key, old_buckets[i]->value);
+      |                                      ^~
+hashmap.c:128:59: error: request for member ‘value’ in something not a structure or union
+  128 |         insertMap(map, old_buckets[i]->key, old_buckets[i]->value);
+      |                                                           ^~
+cc1: all warnings being treated as errors
+b100cb4
