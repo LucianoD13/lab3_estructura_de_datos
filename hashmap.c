@@ -116,6 +116,7 @@ void eraseMap(HashMap * map,  char * key) {
                 map->current = -1;
             }
             return;
+        }
         pos = (pos + 1) % map->capacity;
     }
 }
