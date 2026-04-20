@@ -428,3 +428,16 @@ Mon Apr 20 03:01:00 AM UTC 2026:
  tests:  10|2
 total_score: 40/60
 472780e
+Mon Apr 20 03:12:52 AM UTC 2026: 
+ hashmap.c | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:113:36: error: expected ‘;’ before ‘map’
+  113 |             free(map->buckets[pos])
+      |                                    ^
+      |                                    ;
+  114 |             map->buckets[pos] = NULL;
+      |             ~~~                     
+1a2c960
